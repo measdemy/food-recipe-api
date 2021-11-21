@@ -9,9 +9,6 @@ app.use(express.json());
 
 app.use(cors());
 
-app.get('/', (req, res) => {
-  res.json({ success: 'Hello World!' });
-});
-app.use('/recipe', recipe);
+app.use('/', recipe);
 
 app.listen(port, () => console.log(`App listening on port ${port}`));
